@@ -9,7 +9,7 @@ def masiv(mas, k):
                 has_k = True
                 break
     if not has_k:
-        print('There is no such numbers')
+        print([])
 
 
 masiv([-1, 2, 3, 4], 22)
