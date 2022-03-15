@@ -1,18 +1,14 @@
 def masiv(mas, k):
-    has_k = False
-    for i in mas:
-        ind = mas.index(i)
-        for j in mas[ind + 1:]:
-            summa = i + j
+    for i, value_i in enumerate(mas):
+        for j, value_j in enumerate(mas[i + 1:]):
+            summa = value_i + value_j
             if summa == k:
-                print(f'{k} = {i} + {j}')
-                has_k = True
-                break
-    if not has_k:
-        print([])
+                print(f'Answer: {value_i} and {value_j}')
+                return
+    print([])
 
 
-masiv([-1, 2, 3, 4], 22)
+masiv([-1, 2, 3, 4], 8)
 
 
 def sum_of_two(mas, k):
